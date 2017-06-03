@@ -1,0 +1,71 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Import Froala CSS
+@import "froala_editor.min.css";
+@import "froala_style.min.css";
+@import 'plugins/char_counter.min.css';
+@import 'plugins/code_view.min.css';
+@import 'plugins/colors.min.css';
+@import 'plugins/emoticons.min.css';
+@import 'plugins/file.min.css';
+@import 'plugins/fullscreen.min.css';
+@import 'plugins/help.min.css';
+@import 'plugins/image_manager.min.css';
+@import 'plugins/image.min.css';
+@import 'plugins/line_breaker.min.css';
+@import 'plugins/quick_insert.min.css';
+@import 'plugins/special_characters.min.css';
+@import 'plugins/table.min.css';
+@import 'plugins/video.min.css';
+
+// Import dashboard css
+@import "dashboard/style";
+@import "dashboard/custom_1";
+@import "dashboard/custom";
+// @import "dashboard/main";
+@import "dashboard/swipebox";
+@import "dashboard/owl.carousel";
+@import "dashboard/examples";
+@import "dashboard/graph";
+@import "dashboard/clndr";
+@import "dashboard/calendar";
+
+// Additional CSS
+
+hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 125px;
+  border-color: #9a9a9a;
+}
+
+.thumb {
+  border-radius: 30px;
+  max-height: 40px;
+}
+
+.button-post {
+  margin-top: 10px;
+  float: right;
+}
+
+.sidebar-post {
+  float: right;
+}
+
+.second-menu {
+  position: inherit;
+  float: none;
+  padding: 0;
+}
+
+.second-menu li a {
+  padding: 0;
+}
+
+.second-menu li a i {
+  color: #1abc9c;
+}

@@ -1,0 +1,31 @@
+<div class="header" id="home">
+ <div class="content white">
+  <nav class="navbar navbar-default" role="navigation">
+     <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "<h1>Geek<span>ID</span></h1>".html_safe, root_path, class: "navbar-brand"%>
+    </div>
+    <!--/.navbar-header-->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" style="float:right;">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Code", tag_path(tag: "#")%></li>
+          <li><%= link_to "Linux", tag_path(tag: "#")%></li>
+          <li><%= link_to "Networking", tag_path(tag: "#")%></li>
+          <li><%= link_to "Contact", "#"%></li>
+          <li><%= link_to "About Me",  "#"%></li>
+        </ul>
+    </div>
+    <!--/.navbar-collapse-->
+ <!--/.navbar-->
+   </div>
+</nav>
+</div>
+</div>

@@ -1,0 +1,45 @@
+<div class="banner">
+</div>
+
+<div class="grid-system">
+  <div class="horz-grid">
+    <div class="grid-hor">
+        <h3 id="grid-example-basic">Published Post</h3>
+    </div>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <table class="table">
+      <tr>
+        <th>Content Title</th>
+        <th>Author</th>
+        <th>Tags</th>
+        <th>Action</th>
+      </tr>
+      <% @posts.each do |post| %>
+      <tr>
+        <% if current_user.admin? %>
+          <td><%= post.title %></td>
+          <td><%= post.user.name %></td>
+          <td><%= raw post.all_tags %></td>
+          <td>
+            <%= link_to "Edit", post_edit_url(post), class: "btn btn-info btn-sm", method: :get %>
+            <%= link_to "delete", post, method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "You sure?" } %>
+          </td>
+        <% elsif  current_user?(post.user) %>
+          <td><%= post.title %></td>
+          <td><%= post.user.name %></td>
+          <td><%= raw post.all_tags %></td>
+          <td>
+            <%= link_to "Edit", post_edit_url(post), class: "btn btn-info btn-sm", method: :get %>
+            <%= link_to "delete", post, method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "You sure?" } %>
+          </td>
+        <% end %>
+
+      </tr>
+      <% end %>
+
+    </table>
+    <%= will_paginate @post, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>

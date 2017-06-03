@@ -1,0 +1,30 @@
+<% provide(:title, "Dashboard") %>
+    <div class="banner">
+    </div>
+
+    <div class="content-top">
+      <div class="col-md-8 ">
+				<div class="content-top-1">
+          <h3>Published Post</h3>
+          <% @post.each do |posts| %>
+            <%= posts.title %>
+            <%= posts.user.name %>
+            <%= posts.created_at.to_date %><br/>
+          <% end %>
+
+				</div>
+			</div>
+      <div class="col-md-4 ">
+				<div class="content-top-1">
+          <h3>Published Post</h3>
+          <% @post.each do |posts| %>
+            <%= posts.title %>
+            <%= posts.user.name %>
+            <%= posts.created_at.to_date %><br/>
+          <% end %>
+
+				</div>
+			</div>
+		<div class="clearfix"> </div>
+
+    </div>

@@ -1,0 +1,53 @@
+<% provide(:title, "User Profile") %>
+<div class="banner">
+</div>
+
+<div class="validation-system">
+  <div class="validation-form">
+      <h3>User Profile</h3>
+      <form>
+        <div class="vali-form">
+          <div class="col-md-6 form-group1">
+            <label class="control-label">Name</label>
+            <input disabled="" type="text" placeholder="<%= @user.name %>" id="disabledinput">
+          </div>
+          <div class="col-md-6 form-group1 form-last">
+            <label class="control-label">Email</label>
+            <input type="text" placeholder="<%= @user.email %>" disabled="" id="disabledinput">
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+          <div class="vali-form">
+            <div class="col-md-6 form-group1">
+              <label class="control-label ">Date of Birth</label>
+              <input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required="">
+            </div>
+            <div class="col-md-6 form-group1 form-last">
+              <label class="control-label">Phone/Mobile Number</label>
+              <input type="text" placeholder="Mobile Number" required="">
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+          <div class="col-md-12 form-group1 group-mail">
+            <label class="control-label">Url</label>
+            <input type="text" placeholder="Current Website Url" required="">
+          </div>
+          <div class="clearfix"> </div>
+          <div class="col-md-12 form-group2 group-mail">
+            <label class="control-label">Country</label>
+            <select>
+              <option value="">Indonesia</option>
+              <option value="">Singapore</option>
+              <option value="">Malaysia</option>
+              <option value="">Australia</option>
+              <option value="">New Zealand</option>
+            </select>
+          </div>
+           <div class="clearfix"> </div>
+          <div class="col-md-12 form-group">
+            <%= link_to "Edit", user_edit_url(@user), class: "btn btn-primary", method: :get %>
+          </div>
+        <div class="clearfix"> </div>
+      </form>
+  </div>
+</div>

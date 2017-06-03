@@ -1,0 +1,47 @@
+<div class="banner">
+</div>
+
+<div class="grid-system">
+  <div class="horz-grid">
+<!-- <%= @user %> -->
+  <div class="grid-hor">
+  <h3 id="grid-example-basic">Users List</h3>
+  <!-- <p class="">Using a single set of <code>.col-md-*</code> grid classes,
+    you can create a basic grid system that starts out stacked on mobile devices and tablet devices
+    (the extra small to small range)
+    before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p> -->
+  </div>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <table class="table">
+
+
+    <tr>
+      <th>No.</th>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <% @user.each_with_index do |users, index| %>
+    <tr>
+      <th scope="row"><%= index += 1 %></th>
+      <td><%= image_tag users.avatar.thumb.url unless users.avatar.blank? %>
+      <td><%= users.name %></td>
+      <td><%= users.email %></td>
+      <td>
+        <p>
+        <%= link_to "Edit", user_edit_url(users), class: "btn btn-info btn-sm", method: :get %>
+        <% if current_user.admin? && !current_user?(users) %>
+          <%= link_to "Delete", users, class: "btn btn-danger btn-sm", method: :delete, data: {confirm: "Are you sure to delete this user?"} %>
+        <% end %>
+      </p>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+
+  </div>
+</div>

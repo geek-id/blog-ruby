@@ -1,0 +1,50 @@
+<div class="banner">
+   <div class="container">
+       <div class="banner-inner">
+          <div class="callbacks_container">
+          <ul class="rslides callbacks callbacks1" id="slider4">
+            <li class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
+              <div class="banner-info">
+              <h3>"We’re just enthusiastic about what we do."</h3>
+              <p><i>- Steve Jobs -</i></p>
+              </div>
+            </li>
+            <li class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+              <div class="banner-info">
+                 <h3>"Be hard on yourself, easy on others."</h3>
+               <p><i>- Imam Syafi'i -</i></p>
+              </div>
+            </li>
+            <li class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+              <div class="banner-info">
+               <h3>"Knowledges without action is ARROGANT"</h3>
+              <p><i>- Imam Syafi'i -</i></p>
+              </div>
+            </li>
+          </ul>
+          </div>
+          <!--banner-Slider-->
+          <!-- <script src="js/responsiveslides.min.js"></script> -->
+           <script>
+          // You can also use "$(window).load(function() {"
+          $(function () {
+            // Slideshow 4
+            $("#slider4").responsiveSlides({
+          auto: true,
+          pager: true,
+          nav:false,
+          speed: 500,
+          namespace: "callbacks",
+          before: function () {
+            $('.events').append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $('.events').append("<li>after event fired.</li>");
+          }
+            });
+
+          });
+            </script>
+      </div>
+      </div>
+</div>

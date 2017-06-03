@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'login', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/login/head' %>
+  </head>
+
+  <body>
+    <div class="login-wrap">
+    <%= yield %>
+    <!-- <%= render 'layouts/login/footer' %> -->
+    </div>
+  </body>
+</html>

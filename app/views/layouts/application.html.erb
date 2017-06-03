@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'blog', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'blog', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/blog/head' %>
+  </head>
+
+  <body>
+
+   <!-- <div class="gtco-loader" style="display:none;"></div> -->
+  	 <div id="page">
+
+     <%= render 'layouts/blog/nav' %>
+
+     <%= yield %>
+     <%= render 'layouts/blog/footer' %>
+    </div>
+    <!-- <div class="gototop js-top">
+  		<a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+  	</div> -->
+    <script id="dsq-count-scr" src="//geekid.disqus.com/count.js" async></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<% provide(:title, @post.title) %>
+<% provide(:descriptions, @post.descriptions) %>
+<% provide(:keywords, @post.all_tags) %>
+<% provide(:author, @post.user.name) %>
+<div class="banner two">
+   <div class="container">
+         <h2 class="inner-tittle">Read | Practice | Problem Solved</h2>
+   </div>
+</div>
+
+<div class="main-content">
+  <div class="container">
+       <div class="mag-inner">
+         <div class="col-md-8 mag-innert-left">
+            <div class="banner-bottom-left-grids">
+                <div class="single-left-grid">
+                  <h3 style="padding-top:30px;"><%= @post.title %></h3>
+                  <div style="color:#ababab; line-height: 15px; font-size: 12px;">Published at <%= @post.created_at.to_date.strftime('%a, %e %b %Y' ) %> |  Author <%= @post.user.name %> </div>
+                   <%= raw(@post.content) %>
+                 </div>
+                 <div class="ks">
+                   Keywords : <%= raw tag_links(@post.all_tags) %>
+                 </div>
+                 <div class="ks">
+                   Share this :<%= social_share_button_tag(@post.title, :allow_sites => %w(twitter facebook google_plus tumblr pinterest email linkedin reddit telegram)) %>
+                 </div>
+                  <!-- <%= link_to @post.tags.name, tag_path(@post.tags.name.downcase) %> -->
+                 <div class="leave">
+                   <h4>Comment</h4>
+                   <div id="disqus_thread"></div>
+                    <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = '<%= url_for(@post) %>';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = '<%= @post.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.title = '<%= @post.title %>';
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://geekid.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                 </div>
+
+              </div>
+          </div>
+        </div>
+         <%= render "layouts/blog/sidebar" %>
+         <div class="clearfix"></div>
+       </div>
+        <!--//end-mag-inner-->
+      </div>
+   </div>

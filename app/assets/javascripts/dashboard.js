@@ -1,0 +1,24 @@
+// Additional JS
+//= require dashboard/Chart.js
+//= require dashboard/clndr.js
+//= require dashboard/custom.js
+//= require dashboard/data.js
+//= require dashboard/gmaps.js
+//= require dashboard/moment-2.2.1.js
+//= require dashboard/owl.carousel.js
+//= require dashboard/pie-chart.js
+//= require dashboard/screenfull.js
+//= require dashboard/scripts.js
+//= require dashboard/site.js
+//= require dashboard/skycons.js
+//= require dashboard/underscore-min.js
+
+//= require dashboard/jquery.calendario.js
+//= require dashboard/jquery.flot.js
+//= require dashboard/jquery.flot.pie.js
+//= require dashboard/jquery.flot.selection.js
+//= require dashboard/jquery.flot.stack.js
+//= require dashboard/jquery.metisMenu.js
+//= require dashboard/jquery.nicescroll.js
+//= require dashboard/jquery.slimscroll.min.js
+//= require dashboard/jquery.swipebox.min.js
