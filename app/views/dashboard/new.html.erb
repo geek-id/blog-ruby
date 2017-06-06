@@ -5,7 +5,7 @@
     <div class="content-top">
       <div class="col-md-8 ">
 				<div class="content-top-1">
-          <h3>Published Post</h3>
+          <h3>Published Post ( <%= @post.where(published: true).count %> )</h3>
           <% @post.each do |posts| %>
             <%= posts.title %>
             <%= posts.user.name %>
@@ -16,11 +16,9 @@
 			</div>
       <div class="col-md-4 ">
 				<div class="content-top-1">
-          <h3>Published Post</h3>
-          <% @post.each do |posts| %>
-            <%= posts.title %>
-            <%= posts.user.name %>
-            <%= posts.created_at.to_date %><br/>
+          <h3>User Available ( <%= @user.count %> )</h3>
+          <% @user.each do |user| %>
+            <%= user.name %>
           <% end %>
 
 				</div>

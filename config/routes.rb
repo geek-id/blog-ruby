@@ -15,15 +15,15 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   # Get user manage
-  get '/users', to: 'users#index', as: '/users/'
+  get 'dashboard/users', to: 'users#index', as: 'users'
 
-  get '/users/add', to: 'users#new'
-  post '/users',  to: 'users#create'
-  delete '/users/:id', to: 'users#destroy', as: '/user'
-  get '/users/:id/profile', to: 'users#show', as:'/user/profile'
-  get '/users/:id/edit', to: 'users#edit', as: '/user/edit'
-  patch '/users/:id', to: 'users#update'
-  put '/users/:id', to: 'users#update'
+  get 'dashboard//users/add', to: 'users#new', as: 'users/add'
+  post 'dashboard/users',  to: 'users#create'
+  delete 'dashboard/users/:id', to: 'users#destroy', as: '/user'
+  get 'dashboard/users/:id/profile', to: 'users#show', as:'/user/profile'
+  get 'dashboard/users/:id/edit', to: 'users#edit', as: '/user/edit'
+  patch 'dashboard/users/:id', to: 'users#update'
+  put 'dashboard/users/:id', to: 'users#update'
 
   # resources :users
 

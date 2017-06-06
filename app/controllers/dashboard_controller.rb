@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
       redirect_to login_url
     end
     @post = Post.where(published: true)
+    @user = User.all
   end
 
   # def show
