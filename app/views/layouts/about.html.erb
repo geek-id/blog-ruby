@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= render 'layouts/about/head' %>
+    <%= stylesheet_link_tag    'about', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'about', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <%= render 'layouts/about/nav' %>
+    <%= render 'layouts/about/banner' %>
+    <%= yield %>
+  </body>
+</html>

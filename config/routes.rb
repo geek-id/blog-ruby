@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   # Get Front Page
   root 'pages#home'
   # get 'pages/home'
-  get 'pages/about'
-  get '/content/:id', to: 'pages#show', as: 'content'
+  get 'about-me', to: "pages#about"
+  get 'content/:id', to: 'pages#show', as: 'content'
 
   #Dashboard Panel
   get '/dashboard', to: 'dashboard#new'

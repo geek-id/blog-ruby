@@ -1,2 +1,244 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div class="about-me" id="about">
+	<h3 class="text-center slideanim">About My Skills</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-xs-12">
+				<div class="mydetails slideanim text-center">
+          <%= image_tag "about/me.jpg", class: "img-responsive", alt: "Adhitya Restu Kusuma Putra", width: "200", height: "200" %>
+					<!-- <img class="img-circle img-responsive" src="about/me.jpg" alt="Generic placeholder image" width="200" height="200"> -->
+					<h3>Adhitya Restu Kusuma Putra</h3>
+					<p>System Administrator</p>
+					<div class="social-icons">
+            <%= link_to "<span class=\"facebook\"></span>".html_safe, "https://www.fb.com/itnewbie" %>
+  					<!-- <a href="#"><span class="twitter"></span></a> -->
+            <%= link_to "<span class=\"linkedin\"></span>".html_safe, "https://www.linkedin.com/in/geekid/" %>
+  					<!-- <a href="#"><span class="googleplus"></span></a> -->
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-xs-12">
+				<div class="myskills slideanim">
+					<h3 class="text-center">My Skill Info</h3>
+					<p class="skill-text">Hello, my name is Adhitya Restu Kusuma Putra. I worked as a System Administration and Network Engineer. And enthusiastic with Networking, Linux Administration, Virtualization, Cloud Computing and New Technology. </p>
+					<div class="skill-info">
+						<div class="table-responsive">
+							<table class="table">
+								<tbody>
+									<tr>
+										<td><h4>Linux SysAdmin</h4></td>
+										<td><span class="longline1"></span><span class="shortline1"></span></td>
+										<td><p>90%</p></td>
+									</tr>
+									<tr>
+										<td><h4>Routing & Switching</h4></td>
+										<td><span class="longline2"></span><span class="shortline2"></span></td>
+										<td><p>80%</p></td>
+									</tr>
+									<tr>
+										<td><h4>Python</h4></td>
+										<td><span class="longline3"></span><span class="shortline3"></span></td>
+										<td><p>60%</p></td>
+									</tr>
+									<tr>
+										<td><h4>Ruby on Rails</h4></td>
+										<td><span class="longline4"></span><span class="shortline4"></span></td>
+										<td><p>70%</p></td>
+									</tr>
+									<!-- <tr>
+										<td><h4>HTML5</h4></td>
+										<td><span class="longline5"></span><span class="shortline5"></span></td>
+										<td><p>96%</p></td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="myportfolio" id="portfolio">
+  <h3 class="text-center slideanim">My Portfolio</h3>
+  <p class="text-center slideanim">My Recent Projects , Just "Click" on them to know More.</p>
+  <section class="vertical" id="grid3d">
+      <div class="grid-wrap">
+        <div class="grid">
+          <figure><img class="slideanim" src="images/1.jpg" alt="img01"/></figure>
+          <figure><img class="slideanim" src="images/2.jpg" alt="img05"/></figure>
+          <figure><img class="slideanim" src="images/3.jpg" alt="img08"/></figure>
+          <figure><img class="slideanim" src="images/4.jpg" alt="img02"/></figure>
+          <figure><img class="slideanim" src="images/5.jpg" alt="img04"/></figure>
+          <figure><img class="slideanim" src="images/6.jpg" alt="img03"/></figure>
+          <figure><img class="slideanim" src="images/7.jpg" alt="img09"/></figure>
+          <figure><img class="slideanim" src="images/8.jpg" alt="img06"/></figure>
+          <figure><img class="slideanim" src="images/9.jpg" alt="img07"/></figure>
+        </div>
+      </div> -->
+      <!-- /grid-wrap -->
+      <!-- <div class="content">
+        <div>
+          <div class="content-img"><img src="images/1-1.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Classy Coming Soon</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/2-2.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">404 Error Page</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/3-3.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Credit Card Validation</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/4-4.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Eshop Product Detail Widget</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/5-5.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Model Profile Widget</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/6-6.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Flat Under Construction</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/7-7.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Impressive Under Construction</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/8-8.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Profile Widget</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <div class="content-img"><img src="images/9-9.jpg" class="img-responsive" alt="my projects"></div>
+          <h3 class="content-text">Travel Reservation Widget</h3>
+          <p class="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <span class="loading"></span>
+        <span class="icon close-content"></span>
+      </div>
+    </section>
+  </div> -->
+
+
+  <div class="contact-me" id="contact">
+  	<h3 class="text-center slideanim">Contact Me</h3>
+  	<p class="text-center slideanim">More information about me or offer a jobs.</p>
+  	<div class="container">
+  	<footer>
+  		<div class="row">
+  			<div class="col-md-6 slideanim">
+  				<div class="contact-details">
+  					<form action="#" method="post">
+  						<div class="row">
+  							<div class="col-sm-12 form-group">
+  								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+  							</div>
+  							<div class="col-sm-12 form-group">
+  								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+  							</div>
+  						</div>
+  						<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+  						<div class="row">
+  							<div class="col-sm-12 form-group">
+  								<button class="btn btn-default btn-lg" type="submit">Send <span class="glyphicon glyphicon-menu-right"></span></button>
+  							</div>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="col-md-6 slideanim">
+  				<div class="contact-info">
+  					<h4>Contact Info</h4>
+  					<p>Maybe if you interested with my skill and intend to offer a job, please contact me at:</p>
+  					<div class="footer-info">
+  						<div>
+  							<i class="glyphicon glyphicon-globe"></i>
+  							<p class="p1">Tegal Asri RT 01/RW XI, Gawanan, Colomadu</p>
+  							<p class="p2">Karanganyar, Jawa Tengah, Indonesia, 57175</p>
+  						</div>
+  						<div>
+  							<i class="glyphicon glyphicon-phone-alt"></i>
+  							<p class="p1">+62 878 3557 6449 (Phone/WA)</p>
+  							<!-- <p class="p2">+00 1010101010</p> -->
+  						</div>
+  						<div>
+  							<i class="glyphicon glyphicon-envelope"></i>
+  							<p class="p1"><a href="mailto:adhitya.putra1903@gmail.com">adhitya.putra1903@gmail.com</a></p>
+  							<p class="p2"><a href="mailto:sysadmin@misterstark.id">sysadmin@misterstark.id</a></p>
+  						</div>
+  					</div>
+  					<!-- <h5>Personal Profile</h5>
+  					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> -->
+  				</div>
+  			</div>
+  		</div>
+  		<hr>
+  		<div class="copyright">
+  			<p class="text-center">© 2016 GeekID. All Rights Reserved | Template by <a href="http://w3layouts.com">My Profile - W3layouts</a></p>
+  		</div>
+  		<a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  		</footer>
+  	</div>
+  </div>
+
+  <script>
+  $(window).load(function() {
+
+   // Slideshow for banner
+    $("#slider").responsiveSlides({
+      maxwidth: 1920,
+      speed: 1000
+    });
+
+
+  });
+  </script>
+
+  <script>
+    new grid3D( document.getElementById( 'grid3d' ) );
+  </script>
+
+  <script>
+$(document).ready(function(){
+// Add smooth scrolling to all links in navbar + footer link
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+// Store hash
+var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+$('html, body').animate({
+  scrollTop: $(hash).offset().top
+}, 900, function(){
+
+  // Add hash (#) to URL when done scrolling (default click behavior)
+  window.location.hash = hash;
+  });
+});
+})
+
+</script>
+
+<script>
+$(window).scroll(function() {
+$(".slideanim").each(function(){
+  var pos = $(this).offset().top;
+
+  var winTop = $(window).scrollTop();
+  if (pos < winTop + 600) {
+    $(this).addClass("slide");
+  }
+});
+});
+</script>

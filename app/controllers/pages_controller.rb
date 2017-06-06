@@ -1,9 +1,11 @@
 class PagesController < ApplicationController
+  layout "about", only: [:about]
+
   def home
     @post = Post.where(published: true).paginate(page: params[:page], per_page: 5)
     # @tags = Tag.find_by(id: params[:id])
     @posts = Post.where(published: true).order("created_at DESC").limit(5)
-    
+
     @subcriber = Subcriber.new
   end
 
