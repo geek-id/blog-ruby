@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   # Get user manage
   get 'dashboard/users', to: 'users#index', as: 'users'
 
-  get 'dashboard//users/add', to: 'users#new', as: 'users/add'
+  get 'dashboard/users/add', to: 'users#new', as: 'users/add'
   post 'dashboard/users',  to: 'users#create'
   delete 'dashboard/users/:id', to: 'users#destroy', as: '/user'
   get 'dashboard/users/:id/profile', to: 'users#show', as:'/user/profile'
@@ -27,21 +27,21 @@ Rails.application.routes.draw do
 
   # resources :users
 
-  get 'posts', to: 'posts#index',as: '/posts/'
-  get 'posts/create', to: 'posts#new'
-  post 'posts', to: 'posts#create'
+  get 'dashboard/posts', to: 'posts#index',as: '/posts/'
+  get 'dashboard/posts/create', to: 'posts#new', as: 'posts/create'
+  post 'dashboard/posts', to: 'posts#create'
   # post '/posts/:post_id/attach', to: 'posts#attach', as: '/posts/attach'
-  delete 'posts/:id', to: 'posts#destroy', as: '/post'
-  get 'posts/draft', to: 'posts#draft'
+  delete 'dashboard/posts/:id', to: 'posts#destroy', as: '/post'
+  get 'dashboard/posts/draft', to: 'posts#draft', as: 'posts/draft'
   # get 'posts/:id', to: 'posts#show'
 
   # resources :posts do
   #   post 'attach' => 'posts#attach'
   # end
 
-  get 'posts/:id/edit', to: 'posts#edit', as: '/post/edit'
-  patch 'posts/:id', to: 'posts#update'
-  put 'posts/:id', to: 'posts#update'
+  get 'dashboard/posts/:id/edit', to: 'posts#edit', as: '/post/edit'
+  patch 'dashboard/posts/:id', to: 'posts#update'
+  put 'dashboard/posts/:id', to: 'posts#update'
 
   post 'attachment/upload', to: 'post_attachment#upload'
   get 'attachment/index', to: 'post_attachment#index'
