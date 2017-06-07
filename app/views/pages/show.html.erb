@@ -15,7 +15,7 @@
             <div class="banner-bottom-left-grids">
                 <div class="single-left-grid">
                   <h3 style="padding-top:30px;"><%= @post.title %></h3>
-                  <div style="color:#ababab; line-height: 15px; font-size: 12px;">Published at <%= @post.created_at.to_date.strftime('%a, %e %b %Y' ) %> |  Author <%= @post.user.name %> </div>
+                  <div style="color:#ababab; line-height: 15px; font-size: 12px;"><i class="fa fa-calendar" aria-hidden="true"></i> Published at <%= @post.created_at.to_date.strftime('%a, %e %b %Y' ) %> | <i class="fa fa-user-circle" aria-hidden="true"></i> Author <%= @post.user.name %> </div>
                    <%= raw(@post.content) %>
                  </div>
                  <div class="ks">

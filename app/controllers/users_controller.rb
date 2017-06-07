@@ -4,13 +4,16 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: [:index, :create, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_user
-
+  add_breadcrumb "Dashboard", :dashboard_path
 
   def index
-    @user = User.all
+    add_breadcrumb "All User", users_path
+    @users = User.all
   end
 
   def new
+    add_breadcrumb "New User", users_add_path
+    @users = User.all
     if logged_in? && current_user.admin?
       @user = User.new
     else
@@ -19,11 +22,14 @@ class UsersController < ApplicationController
   end
 
   def show
+    add_breadcrumb "Profile User", user_profile_path
     logged_in_user
     @user = User.friendly.find(params[:id])
   end
 
   def edit
+    @users = User.all
+    add_breadcrumb "Edit User", user_edit_path
     @user = User.friendly.find(params[:id])
   end
 

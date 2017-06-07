@@ -15,7 +15,7 @@
                <% @post.each do |posts| %>
                <div class="world-news-grid">
                  <div style="text-transform: uppercase; font-size: 18px;"><%= link_to posts.title, content_path(posts) , class: "wd" %></div>
-                 <div style="color:#ababab; line-height: 15px; font-size: 12px;">Published at <%= posts.created_at.to_date.strftime('%a, %e %b %Y' ) %> |  Author <%= posts.user.name %></div>
+                 <div style="color:#ababab; line-height: 15px; font-size: 12px;"><i class="fa fa-calendar" aria-hidden="true"></i> Published at <%= posts.created_at.to_date.strftime('%a, %e %b %Y' ) %> | <i class="fa fa-user-circle" aria-hidden="true"></i> Author <%= posts.user.name %></div>
                  <!-- Show Featured Image Post -->
                  <% if posts.images.present? %>
                     <p><%= image_tag posts.images %></p>

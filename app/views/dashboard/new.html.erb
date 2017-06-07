@@ -1,25 +1,46 @@
 <% provide(:title, "Dashboard") %>
     <div class="banner">
+      <%= link_to render_breadcrumbs %>
     </div>
 
     <div class="content-top">
       <div class="col-md-8 ">
 				<div class="content-top-1">
           <h3>Published Post ( <%= @post.where(published: true).count %> )</h3>
-          <% @post.each do |posts| %>
-            <%= posts.title %>
-            <%= posts.user.name %>
-            <%= posts.created_at.to_date %><br/>
-          <% end %>
+          <table class="table">
+            <tr>
+              <th>Content Title</th>
+              <th>Author</th>
+              <th>Published at</th>
+            </tr>
+            <% @post.each do |post| %>
+            <tr>
+                <td><%= post.title %></td>
+                <td><%= post.user.name %></td>
+                <td><%= post.created_at.to_date %></td>
+            </tr>
+            <% end %>
+
+          </table>
+          <%= will_paginate @post, renderer: BootstrapPagination::Rails %>
 
 				</div>
 			</div>
       <div class="col-md-4 ">
 				<div class="content-top-1">
-          <h3>User Available ( <%= @user.count %> )</h3>
-          <% @user.each do |user| %>
-            <%= user.name %>
-          <% end %>
+          <h3>User Available ( <%= @users.count %> )</h3>
+          <table class="table" style="margin: 0 -15px;">
+            <tr>
+              <th>Name</th>
+              <th>email</th>
+            </tr>
+            <% @users.each do |user| %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+            </tr>
+            <% end %>
+          </table>
 
 				</div>
 			</div>
