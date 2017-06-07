@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   layout "about", only: [:about]
+  rescue_from ActionController::RoutingError, ActiveRecord::RecordNotFound, with: :render_404
 
   def home
     @post = Post.where(published: true).paginate(page: params[:page], per_page: 5)
@@ -15,10 +16,13 @@ class PagesController < ApplicationController
   def show
     @posts = Post.where(published: true).order("created_at DESC").limit(5)
 
-    @post = Post.friendly.find(params[:id])
-    # if request.path != content_path(@post)
-    #   redirect_to @post, status: :moved_permanently
-    # end
+    begin
+      @post = Post.friendly.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render four_oh_four_path
+    rescue ActionController::RoutingError
+      render four_oh_four_path
+    end
 
     @subcriber = Subcriber.new
   end
@@ -26,7 +30,13 @@ class PagesController < ApplicationController
   def tag
     @posts = Post.where(published: true).order("created_at DESC").limit(5)
     if params[:tag]
-      @post = Post.tagged_with(params[:tag])
+      begin
+        @post = Post.tagged_with(params[:tag])
+      rescue ActiveRecord::RecordNotFound
+        render four_oh_four_path
+      rescue ActionController::RoutingError
+        render four_oh_four_path
+      end
     else
       @post = Post.all
     end
@@ -46,5 +56,10 @@ class PagesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  private
+    def render_404
+      render file: "#{Rails.root}/public/404.html.erb", layout: "application", status: 404
+    end
 
 end

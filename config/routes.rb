@@ -53,6 +53,8 @@ Rails.application.routes.draw do
 
   resources :subcriber, only: [:index, :create]
 
+  get '*path', controller: 'application', action: 'render_404', as: "four_oh_four"
+
   # resources :post_attachment
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
