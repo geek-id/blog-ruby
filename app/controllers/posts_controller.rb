@@ -7,13 +7,17 @@ class PostsController < ApplicationController
   # before_action :correct_user,   only: :destroy
   # raise ActionController::RoutingError.new('Not Found')
   # around_action :rescue_from_fk_contraint, only: [:destroy]
-
+  add_breadcrumb "Dashboard", :dashboard_path
 
   def index
+    @users = User.all
+    add_breadcrumb "Published Post", posts_path
     @posts = Post.where(published: true).paginate(page: params[:page], per_page: 5)
   end
 
   def new
+    @users = User.all
+    add_breadcrumb "Create Post", posts_create_path
     logged_in_user
     @post = Post.new
     # @maximum_length = Post.validators_on( :descriptions).first.options[:maximum]
@@ -33,6 +37,8 @@ class PostsController < ApplicationController
   end
 
   def draft
+    @users = User.all
+    add_breadcrumb "Draft Post", posts_draft_path
     # @user = User.find_by(params[:id])
     @post = Post.where(published: false).paginate(page: params[:page], per_page: 5)
   end
@@ -44,6 +50,8 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @users = User.all
+    add_breadcrumb "Edit Post", post_edit_path
     @post = Post.friendly.find(params[:id])
   end
 
