@@ -30,6 +30,10 @@ class Post < ApplicationRecord
     Tag.find_by_name!(name).posts
   end
 
+  def self.counts
+    self.select("name, count(taggings.tag_id) as count").join(:taggings).group("taggings.tag_id")
+  end
+
   private
     def images_size_validation
       errors[:images] << "should be less than 5MB" if images.size > 5.megabytes

@@ -11,6 +11,8 @@ class DashboardController < ApplicationController
     end
     @post = Post.where(published: true).paginate(page: params[:page], per_page: 5)
     @users = User.all
+    @tags = Tag.all
+
   end
 
   # def show

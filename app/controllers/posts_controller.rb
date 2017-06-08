@@ -107,4 +107,6 @@ class PostsController < ApplicationController
        render "shared/500", status: 500
      end
 
+
+
 end
