@@ -49,6 +49,7 @@ gem 'wysiwyg-rails'
 gem 'will_paginate-bootstrap'
 gem 'social-share-button'
 gem 'breadcrumbs_on_rails'
+gem 'sitemap_generator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
