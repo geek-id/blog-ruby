@@ -31,8 +31,8 @@ SitemapGenerator::Sitemap.create do
   add about_me_path
 
   Post.find_each do |post|
-    add content_path(post.all_tags), lastmod: post.updated_at
-    add content_path(post.slug), lastmod: post.updated_at
+    add content_path(post.all_tags), lastmod: post.updated_at, priority: 0.5, changefreq: 'daily'
+    add content_path(post.slug), lastmod: post.updated_at, priority: 0.5, changefreq: 'daily'
   end
 end
 
