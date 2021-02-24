@@ -31,7 +31,7 @@ default: &default
   pool: 5
   timeout: 5000
   username: admin
-  password: poetra19
+  password: xxxx
   host: localhost
 
 development:
@@ -40,7 +40,7 @@ development:
   database: blog
   pool: 5
   username: admin
-  password: poetra19
+  password: xxxx
   host: localhost
 
 production:
@@ -49,7 +49,7 @@ production:
   database: blog
   pool: 5
   username: admin
-  password: poetra19
+  password: xxxx
   host: localhost
 
 test:
@@ -58,5 +58,5 @@ test:
   database: blog
   pool: 5
   username: admin
-  password: poetra19
+  password: xxxx
   host: localhost
